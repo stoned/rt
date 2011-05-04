@@ -70,7 +70,7 @@ EOT
                 else {
                     require FindBin;
                     no warnings "once";
-                    $bin_path = $FindBin::Bin;
+                    $bin_path = $FindBin::RealBin;
                 }
             }
             $lib = File::Spec->catfile( $bin_path, File::Spec->updir, $lib );
